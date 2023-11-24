@@ -1,4 +1,4 @@
-import {createProcessor} from 'jolly-roger-indexer';
+import {createProcessor} from 'bikaz-project-indexer';
 import {createIndexerState, keepStateOnIndexedDB} from 'ethereum-indexer-browser';
 import {initialContractsInfos} from '$lib/config';
 import {connection, network} from '$lib/web3';
@@ -18,7 +18,7 @@ const remoteIndexedState = url(`/indexed-state-${initialContractsInfos.name}.jso
 export const {state, syncing, status, init, indexToLatest, indexMore, startAutoIndexing, indexMoreAndCatchupIfNeeded} =
 	createIndexerState(processor, {
 		trackNumRequests: true,
-		keepState: keepStateOnIndexedDB('jolly-roger', remoteIndexedState) as any, // TODO types
+		keepState: keepStateOnIndexedDB('bikaz-project', remoteIndexedState) as any, // TODO types
 	});
 
 async function indexIfNotIndexing() {

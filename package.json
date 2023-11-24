@@ -1,7 +1,7 @@
 {
-  "name": "jolly-roger",
+  "name": "bikaz-project",
   "version": "0.0.1",
-  "description": "Template to develop fully decentralised app and games",
+  "description": "Money is broken. Time to fix it.",
   "private": true,
   "type": "module",
   "devDependencies": {
@@ -12,12 +12,12 @@
     "vitepress": "1.0.0-rc.30"
   },
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
+    "preinstall": "pnpx only-allow pnpm",
     "---------------------- INSTALL ----------------------": "",
-    "boot": "npx change-name@0.3.1 --ask jolly-roger && pnpm i",
-    "set-name": "npx change-name@0.3.1 --ask jolly-roger",
+    "boot": "pnpx change-name@latest --ask bikaz-project && pnpm i",
+    "set-name": "pnpx change-name@latest --ask bikaz-project",
     "template-test": "pnpm --filter ./contracts local_node & pnpm run --filter ./contracts deploy localhost ~~ pnpm export -n localhost --ts ../indexer/src/contracts.ts,../web/src/data/contracts.ts ~~ && pnpm run --filter ./common build && pnpm --filter ./indexer build",
-    "sync-deps": "syncpack fix-mismatches && pnpm -r format:fix",
+    "sync-deps": "syncpack fix-mismatches && pnpm -r format",
     "update-deps": "pnpm update -r -i --latest && pnpm sync-deps",
     "---------------------- FORMAT ----------------------": "",
     "format": "prettier --write . && pnpm -r format",

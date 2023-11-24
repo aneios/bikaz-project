@@ -1,1 +1,1 @@
-# Jolly Roger Frontend
+# Bikaz Project Frontend

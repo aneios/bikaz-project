@@ -1,87 +1,89 @@
----
-outline: deep
----
-# {{{name}}}
-
+--- outline: deep --- #
+{{{name}}}
 
 {{#if notice}}
-### **Description**
+	### **Description**
 
-{{{notice}}}
+	{{{notice}}}
 {{/if}}
 
 {{#if methods.length}}
-## Functions
+	## Functions
 
-{{#each methods}}
-### **{{{name}}}**
+	{{#each methods}}
+		### **{{{name}}}**
 
-{{{notice}}}
+		{{{notice}}}
 
-*sig hash*: `{{{bytes4}}}`
+		*sig hash*: `{{{bytes4}}}` *Signature*:
+		{{{signature}}}
 
-*Signature*: {{{signature}}}
+		{{{fullFormat}}}
 
-{{{fullFormat}}}
+		{{#if params.length}}
+			| Name | Description | ---- | -----------
+			{{#each params}}
+				{{#if description}}
+					|
+					{{{name}}}
+					|
+					{{{description}}}
+				{{/if}}
+			{{/each}}
 
-{{#if params.length}}
-| Name | Description 
-| ---- | ----------- 
-{{#each params}}
-{{#if description}}
-| {{{name}}} | {{{description}}}
-{{/if}}
-{{/each}}
-
-{{/if}}
-{{/each}}
+		{{/if}}
+	{{/each}}
 {{/if}}
 
 {{#if events.length}}
-## Events
+	## Events
 
-{{#each events}}
-### **{{{name}}}**
+	{{#each events}}
+		### **{{{name}}}**
 
-{{{notice}}}
+		{{{notice}}}
 
-{{{fullFormat}}}
+		{{{fullFormat}}}
 
-{{#if params.length}}
-| Name | Description 
-| ---- | ----------- 
-{{#each params}}
-{{#if description}}
-| {{{name}}} | {{{description}}}
-{{/if}}
-{{/each}}
+		{{#if params.length}}
+			| Name | Description | ---- | -----------
+			{{#each params}}
+				{{#if description}}
+					|
+					{{{name}}}
+					|
+					{{{description}}}
+				{{/if}}
+			{{/each}}
 
-{{/if}}
-{{/each}}
+		{{/if}}
+	{{/each}}
 {{/if}}
 
 {{#if errors.length}}
-## Errors
+	## Errors
 
-{{#each errors}}
-### **{{{name}}}**
+	{{#each errors}}
+		### **{{{name}}}**
 
-{{#each notice}}
-{{{this}}}
+		{{#each notice}}
+			{{{this}}}
 
-{{/each}}
+		{{/each}}
 
-{{{fullFormat}}}
+		{{{fullFormat}}}
 
-{{#if params.length}}
-| Name | Description 
-| ---- | ----------- 
-{{#each params}}
-{{#if description}}
-| {{{name}}} | {{{description}}}
-{{/if}}
-{{/each}}
+		{{#if params.length}}
+			| Name | Description | ---- | -----------
+			{{#each params}}
+				{{#if description}}
+					|
+					{{{name}}}
+					|
+					{{{description}}}
+				{{/if}}
+			{{/each}}
 
-{{/if}}
-{{/each}}
+		{{/if}}
+	{{/each}}
 {{/if}}

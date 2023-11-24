@@ -1,6 +1,6 @@
 {
-  "name": "jolly-roger-common",
-  "version": "0.0.0",
+  "name": "bikaz-project-common",
+  "version": "0.0.1",
   "description": "Common lib",
   "type": "module",
   "main": "dist/index.cjs",

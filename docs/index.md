@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "Jolly-Roger"
+  name: "Bikaz-Project"
   text: "Build and Deploy for Eternity."
-  tagline: "Jolly Roger is a production-ready template for decentralised applications."
+  tagline: "Bikaz Project is a production-ready template for decentralised applications."
   image:
     src: /icon.svg
     width: 512

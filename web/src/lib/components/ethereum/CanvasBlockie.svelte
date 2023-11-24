@@ -85,7 +85,7 @@
 		color: string,
 		scale: number,
 		bgcolor: string,
-		spotcolor: string
+		spotcolor: string,
 	) {
 		const width = Math.sqrt(imageData.length);
 		const size = width * scale;
